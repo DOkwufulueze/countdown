@@ -364,10 +364,15 @@ if (!JSON) {
 		}
 	}
 
-	var DEMO_MS = 681490580000;
-
-	// adjust initial demo time for local timezone
-	// byId('hours').value -= new Date(DEMO_MS).getTimezoneOffset() / 60;
+  function anniversaryDay(str) {
+    byId('okwufulueze-sky').style.display = 'block';
+    var anim = animate('#okwufulueze-sky');
+    byId('felicitate').innerHTML = str;
+    byId('felicitate').style.display = 'block';
+    sc1 = document.createElement('script');
+    sc1.src = 'js/fireworks2.js';
+    document.body.appendChild(sc1);
+  }
 
 	function update() {
 		var units = ~countdown.ALL,
@@ -391,33 +396,30 @@ if (!JSON) {
 
 		var start = new Date(yyyy, MM, dd, HH, mm, ss, fff), ts = countdown(start, null, units, max, digits);
 
-		// var counter = byId('counter'),
-		timespan = byId('timespan'),
-		msg = ts.toHTML('strong', empty);
-		// counter.innerHTML = msg;
-		// timespan.innerHTML = JSON.stringify(ts, null, '  ');
-		byId('days-value').innerHTML = ts.days;
-		byId('hours-value').innerHTML = ts.hours;
-		byId('minutes-value').innerHTML = ts.minutes;
-		byId('seconds-value').innerHTML = ts.seconds;
-		// byId('sub-container').innerHTML = msg + ' to go.';
+    if ((ts.days === 0 && ts.hours === 0 && ts.minutes === 0 && ts.seconds === 0) || new Date().getDate() === dd) {
+      ts.days = 0;
+      ts.hours = 0;
+      ts.minutes = 0;
+      ts.seconds = 0;
+      anniversaryDay("It's our Wedding Anniversary today...");
+    } else if (new Date().getDate() > dd) {
+      ts.days = 0;
+      ts.hours = 0;
+      ts.minutes = 0;
+      ts.seconds = 0;
+      anniversaryDay("We had an awesome Wedding Anniversary on " + dd + " December 2016!");
+    } else {
+  		requestAnimationFrame(update, timespan.parentNode);
+    }
 
-		// update timezone label
-		var tz = start.getTimezoneOffset();
-		// if (tz) {
-		// 	var tzh = Math.floor(Math.abs(tz) / 60),
-		// 		tzm = (Math.abs(tz) % 60);
-		// 	byId('timezone').innerHTML = 'UTC'+((tz > 0) ? '-' : '+')+formatTens(tzh)+':'+formatTens(tzm);
-
-		// } else {
-		// 	byId('timezone').innerHTML = 'UTC';
-		// }
-
-		requestAnimationFrame(update, timespan.parentNode);
+    timespan = byId('timespan'),
+    msg = ts.toHTML('strong', empty);
+    byId('days-value').innerHTML = ts.days.toString().length === 1 ? '0' + ts.days.toString() : ts.days.toString();
+    byId('hours-value').innerHTML = ts.hours.toString().length === 1 ? '0' + ts.hours.toString() : ts.hours.toString();
+    byId('minutes-value').innerHTML = ts.minutes.toString().length === 1 ? '0' + ts.minutes.toString() : ts.minutes.toString();
+    byId('seconds-value').innerHTML = ts.seconds.toString().length === 1 ? '0' + ts.seconds.toString() : ts.seconds.toString();
+    
 	}
-	update();
 
-	// var ours = byId('okwufulueze-countdown');
-	// ours.style.top = ((window.screen.availHeight - window.screen.availTop - ours.offsetHeight) / 2.5) + 'px';
-	// document.body.style.height = (window.screen.availHeight - window.screen.availTop) + 'px';
+	update();
 })();

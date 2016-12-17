@@ -3,6 +3,7 @@ html {
   position: absolute;
   height: 100%;
   width: 100%;
+  min-width: 960px;
 }
 
 body {
@@ -14,6 +15,20 @@ body {
 
 div {
   position: relative;
+}
+
+#felicitate {
+  width: 100%;
+  background: #3a1213;
+  color: #ffffff;
+  text-align: center;
+  font-weight: bold;
+  font-size: 25px;
+  line-height: 50px;
+  height: 50px;
+  position: absolute;
+  top: 0px;
+  display: none;
 }
 
 #okwufulueze-countdown {
@@ -31,7 +46,7 @@ div {
   top: 0px;
   line-height: 50px;
   background: url(../images/pic2.png) no-repeat;
-  color: #D2691E;
+  color: #d2691e;
   font-size: 15px;
 }
 
@@ -70,7 +85,7 @@ div {
   line-height: 50px;
   font-weight: bold;
   font-size: 17px;
-  color: #D2691E;
+  color: #d2691e;
 }
 
 .time-holder {
