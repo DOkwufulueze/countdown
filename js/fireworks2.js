@@ -157,7 +157,7 @@ function set_width() {
 
 if (addRVLoadEvent) {
   window.onload = null;
-  document.body.querySelector('div:last-child:not(#date):not(.time-holder):not(.time-value)').remove();
+  if (document.body.querySelector('div:last-child:not(#date):not(.time-holder):not(.time-value)')) document.body.querySelector('div:last-child:not(#date):not(.time-holder):not(.time-value)').remove();
 }
 
 light_blue_touchpaper();
