@@ -379,6 +379,7 @@ if (!JSON) {
 			empty = null,
 			max = 11,
 			digits = 0;
+      dateToday = byId('dd').value;
 
 		var yyyy = 2016,
 			MM = 11,
@@ -396,13 +397,13 @@ if (!JSON) {
 
 		var start = new Date(yyyy, MM, dd, HH, mm, ss, fff), ts = countdown(start, null, units, max, digits);
 
-    if ((ts.days === 0 && ts.hours === 0 && ts.minutes === 0 && ts.seconds === 0) || new Date().getDate() === dd) {
+    if ((ts.days === 0 && ts.hours === 0 && ts.minutes === 0 && ts.seconds === 0) || dateToday === dd) {
       ts.days = 0;
       ts.hours = 0;
       ts.minutes = 0;
       ts.seconds = 0;
       anniversaryDay("It's our Wedding Anniversary today...");
-    } else if (new Date().getDate() > dd) {
+    } else if (dateToday > dd) {
       ts.days = 0;
       ts.hours = 0;
       ts.minutes = 0;

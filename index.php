@@ -6,7 +6,7 @@
 		<meta property="og:title" content="The Okwufuluezes Wedding Anniversary Countdown" />
 		<meta property="og:type" content="website" />
 		<meta property="og:url" content="http://danielokwufulueze.com" />
-		<meta property="og:image" content="http://danielokwufulueze.com/images/ogcountdown4.png" />
+		<meta property="og:image" content="http://danielokwufulueze.com/images/ogcountdown6.png" />
 		<meta charset="UTF-8">
 		<title>The Okwufuluezes Wedding Anniversary Countdown</title>
 		<link href="css/display.css" rel="stylesheet" type="text/css" />
@@ -54,6 +54,12 @@
 					</div>
 					<div class="time-value" id="seconds-value"></div>
 				</div>
+				<input type="hidden" name="yy" id="yy" value="<?php echo date('Y'); ?>">
+				<input type="hidden" name="mn" id="mn" value="<?php echo date('m'); ?>">
+				<input type="hidden" name="dd" id="dd" value="<?php echo date('d'); ?>">
+				<input type="hidden" name="hh" id="hh" value="<?php echo date('H'); ?>">
+				<input type="hidden" name="mm" id="mm" value="<?php echo date('i'); ?>">
+				<input type="hidden" name="ss" id="ss" value="<?php echo date('s'); ?>">
 			</div>
 			<div>
 				<!-- <span id="timezone">&nbsp;UTC</span> -->
