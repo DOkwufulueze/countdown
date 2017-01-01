@@ -379,7 +379,13 @@ if (!JSON) {
 			empty = null,
 			max = 11,
 			digits = 0;
+      yearToday = byId('yy').value;
+      monthToday = byId('mn').value;
       dateToday = byId('dd').value;
+      hourToday = byId('hh').value;
+      minuteToday = byId('mm').value;
+      secondToday = byId('ss').value;
+      dateNow = byId('ymdhis').value;
 
 		var yyyy = 2016,
 			MM = 11,
@@ -389,6 +395,12 @@ if (!JSON) {
 			ss = null,
 			fff = null;
 
+    var pivotDate = new Date(yyyy.toString() + '-' + (MM + 1).toString() + '-' + dd.toString() + ' 00:00:00').getTime();
+    var todaysDate = new Date(yearToday.toString() + '-' + monthToday.toString() + '-' + dateToday.toString() + ' 00:00:00').getTime();
+    // var systemDateObject = new Date();
+    // var systemDate = new Date(systemDateObject.getUTCFullYear().toString() + '-' + (systemDateObject.getUTCMonth() + 1).toString() + '-' + systemDateObject.getUTCDate().toString() + ' 00:00:00').getTime();
+    // var todaysDateTime = new Date(yearToday.toString() + '-' + monthToday.toString() + '-' + dateToday.toString() + ' ' + hourToday.toString() + ':' + minuteToday.toString() + ':' + secondToday.toString()).getTime();
+    // var systemDateTime = systemDateObject.getTime();
 		var entities = [128, 64, 32, 16, 8, 4, 2];
 
 		for (var i=0, count=entities.length; i<count; i++) {
@@ -397,13 +409,13 @@ if (!JSON) {
 
 		var start = new Date(yyyy, MM, dd, HH, mm, ss, fff), ts = countdown(start, null, units, max, digits);
 
-    if ((ts.days === 0 && ts.hours === 0 && ts.minutes === 0 && ts.seconds === 0) || dateToday === dd) {
+    if ((ts.days.toString() === '0' && ts.hours.toString() === '0' && ts.minutes.toString() === '0' && ts.seconds.toString() === '0') || (pivotDate.toString() === todaysDate.toString())) {
       ts.days = 0;
       ts.hours = 0;
       ts.minutes = 0;
       ts.seconds = 0;
       anniversaryDay("It's our Wedding Anniversary today...");
-    } else if (dateToday > dd) {
+    } else if (pivotDate < todaysDate) {
       ts.days = 0;
       ts.hours = 0;
       ts.minutes = 0;

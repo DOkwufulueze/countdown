@@ -62,12 +62,12 @@
 			<div>
 				<!-- <span id="timezone">&nbsp;UTC</span> -->
 			</div>
-			<!-- <input type="hidden" name="yy" id="yy" value="<?php //echo date('Y'); ?>">
-			<input type="hidden" name="mn" id="mn" value="<?php //echo date('m'); ?>"> -->
+			<input type="hidden" name="yy" id="yy" value="<?php echo date('Y'); ?>">
+			<input type="hidden" name="mn" id="mn" value="<?php echo date('m'); ?>">
 			<input type="hidden" name="dd" id="dd" value="<?php echo date('d'); ?>">
-			<!-- <input type="hidden" name="hh" id="hh" value="<?php //echo date('H'); ?>">
-			<input type="hidden" name="mm" id="mm" value="<?php //echo date('i'); ?>">
-			<input type="hidden" name="ss" id="ss" value="<?php //echo date('s'); ?>"> -->
+			<input type="hidden" name="hh" id="hh" value="<?php echo date('H'); ?>">
+			<input type="hidden" name="mm" id="mm" value="<?php echo date('i'); ?>">
+			<input type="hidden" name="ss" id="ss" value="<?php echo date('s'); ?>">
 			<input type="hidden" name="ymdhis" id="ymdhis" value="<?php echo date('Y-m-d H:i:s'); ?>">
 		</div>
 
