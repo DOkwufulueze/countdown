@@ -323,20 +323,20 @@ if (!JSON) {
     var vendors = ['ms', 'moz', 'webkit', 'o'];
     for(var x = 0; x < vendors.length && !window.requestAnimationFrame; ++x) {
         window.requestAnimationFrame = window[vendors[x]+'RequestAnimationFrame'];
-        window.cancelAnimationFrame = window[vendors[x]+'CancelAnimationFrame'] 
+        window.cancelAnimationFrame = window[vendors[x]+'CancelAnimationFrame']
                                    || window[vendors[x]+'CancelRequestAnimationFrame'];
     }
- 
+
     if (!window.requestAnimationFrame)
         window.requestAnimationFrame = function(callback, element) {
             var currTime = new Date().getTime();
             var timeToCall = Math.max(0, 16 - (currTime - lastTime));
-            var id = window.setTimeout(function() { callback(currTime + timeToCall); }, 
+            var id = window.setTimeout(function() { callback(currTime + timeToCall); },
               timeToCall);
             lastTime = currTime + timeToCall;
             return id;
         };
- 
+
     if (!window.cancelAnimationFrame)
         window.cancelAnimationFrame = function(id) {
             clearTimeout(id);
@@ -387,9 +387,9 @@ if (!JSON) {
       secondToday = byId('ss').value;
       dateNow = byId('ymdhis').value;
 
-		var yyyy = 2016,
+		var yyyy = yearToday,
 			MM = 11,
-			dd = 18,
+			dd = 24,
 			HH = null,
 			mm = null,
 			ss = null,
@@ -420,18 +420,19 @@ if (!JSON) {
       ts.hours = 0;
       ts.minutes = 0;
       ts.seconds = 0;
-      anniversaryDay("We had an awesome Wedding Anniversary on " + dd + " December 2016!");
+      anniversaryDay("We had an awesome Wedding Anniversary on " + dd + " December 2017!");
     } else {
   		requestAnimationFrame(update, timespan.parentNode);
     }
 
     timespan = byId('timespan'),
     msg = ts.toHTML('strong', empty);
-    byId('days-value').innerHTML = ts.days.toString().length === 1 ? '0' + ts.days.toString() : ts.days.toString();
+    var days = Number(ts.days) + Number(7 * ts.weeks);
+    byId('days-value').innerHTML = days.toString().length === 1 ? '0' + days.toString() : days.toString();
     byId('hours-value').innerHTML = ts.hours.toString().length === 1 ? '0' + ts.hours.toString() : ts.hours.toString();
     byId('minutes-value').innerHTML = ts.minutes.toString().length === 1 ? '0' + ts.minutes.toString() : ts.minutes.toString();
     byId('seconds-value').innerHTML = ts.seconds.toString().length === 1 ? '0' + ts.seconds.toString() : ts.seconds.toString();
-    
+
 	}
 
 	update();

@@ -9,8 +9,8 @@
 		<meta property="og:site_name" content="Daniel Okwufulueze" />
 		<meta property="og:title" content="The Okwufuluezes Wedding Anniversary Countdown" />
 		<meta property="og:type" content="website" />
-		<meta property="og:url" content="http://danielokwufulueze.com" />
-		<meta property="og:image" content="http://danielokwufulueze.com/images/ogcountdown5.png" />
+		<meta property="og:url" content="http://danielokwufulueze.com/anniversary-countdown" />
+		<meta property="og:image" content="http://danielokwufulueze.com/images/ogcountdown7.png" />
 		<meta charset="UTF-8">
 		<title>The Okwufuluezes Wedding Anniversary Countdown</title>
 		<link href="css/display.css" rel="stylesheet" type="text/css" />
@@ -27,8 +27,8 @@
 			</div>
 			<div id="main-container">
 				<div id="purpose">Countdown to</div>
-				<div id="title">Our Wedding Anniversary</div>
-				<div id="date">18 December 2016</div>
+				<div id="title">Our Wedding Anniversary Celebration</div>
+				<div id="date">24 December 2017</div>
 			</div>
 			<div id="sub-container">
 				<div class="time-holder" id="days-holder">
