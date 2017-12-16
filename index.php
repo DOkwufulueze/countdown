@@ -6,13 +6,15 @@
 	<head>
 		<meta property="fb:app_id" content="1703522383294829" />
 		<meta property="og:description" content="Together Forever" />
-		<meta property="og:site_name" content="Daniel Okwufulueze" />
-		<meta property="og:title" content="The Okwufuluezes Wedding Anniversary Countdown" />
+		<meta property="og:site_name" content="Barbara & Daniel" />
+		<meta property="og:title" content="The Okwufuluezes Wedding Anniversary Celebration Countdown" />
 		<meta property="og:type" content="website" />
 		<meta property="og:url" content="http://danielokwufulueze.com/anniversary-countdown" />
-		<meta property="og:image" content="http://danielokwufulueze.com/images/ogcountdown7.png" />
+		<meta property="og:image" content="http://danielokwufulueze.com/anniversary-countdown/images/ogcountdown7_2.png" />
+		<meta property="og:image:width" content="600" />
+    <meta property="og:image:height" content="600" />
 		<meta charset="UTF-8">
-		<title>The Okwufuluezes Wedding Anniversary Countdown</title>
+		<title>The Okwufuluezes Wedding Anniversary Celebration Countdown</title>
 		<link href="css/display.css" rel="stylesheet" type="text/css" />
 		<link href="css/fireworks.css" rel="stylesheet" type="text/css" />
 	</head>
