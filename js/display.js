@@ -408,18 +408,20 @@ if (!JSON) {
 		}
 
 		var start = new Date(yyyy, MM, dd, HH, mm, ss, fff), ts = countdown(start, null, units, max, digits);
-
+    var stopStatus = false;
     if ((ts.days.toString() === '0' && ts.hours.toString() === '0' && ts.minutes.toString() === '0' && ts.seconds.toString() === '0') || (pivotDate.toString() === todaysDate.toString())) {
       ts.days = 0;
       ts.hours = 0;
       ts.minutes = 0;
       ts.seconds = 0;
+      stopStatus = true;
       anniversaryDay("It's our Wedding Anniversary today...");
     } else if (pivotDate < todaysDate) {
       ts.days = 0;
       ts.hours = 0;
       ts.minutes = 0;
       ts.seconds = 0;
+      stopStatus = true;
       anniversaryDay("We had an awesome Wedding Anniversary on " + dd + " December 2017!");
     } else {
   		requestAnimationFrame(update, timespan.parentNode);
@@ -427,7 +429,7 @@ if (!JSON) {
 
     timespan = byId('timespan'),
     msg = ts.toHTML('strong', empty);
-    var days = Number(ts.days) + Number(7 * ts.weeks);
+    var days = stopStatus ? 0 : Number(ts.days) + Number(7 * ts.weeks);
     byId('days-value').innerHTML = days.toString().length === 1 ? '0' + days.toString() : days.toString();
     byId('hours-value').innerHTML = ts.hours.toString().length === 1 ? '0' + ts.hours.toString() : ts.hours.toString();
     byId('minutes-value').innerHTML = ts.minutes.toString().length === 1 ? '0' + ts.minutes.toString() : ts.minutes.toString();
