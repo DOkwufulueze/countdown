@@ -387,7 +387,7 @@ if (!JSON) {
       secondToday = byId('ss').value;
       dateNow = byId('ymdhis').value;
 
-		var yyyy = yearToday,
+		var yyyy = 2017,
 			MM = 11,
 			dd = 24,
 			HH = null,
