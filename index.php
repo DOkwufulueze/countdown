@@ -10,9 +10,9 @@
 		<meta property="og:title" content="The Okwufuluezes' Wedding Anniversary Celebration Countdown" />
 		<meta property="og:type" content="website" />
 		<meta property="og:url" content="http://danielokwufulueze.com/anniversary-countdown" />
-		<meta property="og:image" content="http://danielokwufulueze.com/anniversary-countdown/images/ogcountdown8.png" />
-		<meta property="og:image:width" content="600" />
-    <meta property="og:image:height" content="600" />
+		<meta property="og:image" content="http://danielokwufulueze.com/anniversary-countdown/images/ogimage.png" />
+		<meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
 		<meta charset="UTF-8">
 		<title>The Okwufuluezes Wedding Anniversary Celebration Countdown</title>
 		<link href="css/display.css" rel="stylesheet" type="text/css" />
