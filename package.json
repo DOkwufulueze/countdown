@@ -1,0 +1,31 @@
+{
+  "name": "countdown",
+  "version": "1.0.0",
+  "description": "countdown to our wedding anniversary",
+  "main": "index.php",
+  "scripts": {
+    "test": "yarn test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/DOkwufulueze/countdown.git"
+  },
+  "keywords": [
+    "countdown",
+    "wedding",
+    "anniversary",
+    "okwufulueze",
+    "daniel",
+    "barbara"
+  ],
+  "author": "Daniel Okwufulueze",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/DOkwufulueze/countdown/issues"
+  },
+  "homepage": "https://github.com/DOkwufulueze/countdown#readme",
+  "dependencies": {
+    "dotenv": "^6.2.0",
+    "nodemon": "^1.18.9"
+  }
+}
