@@ -1,3 +1,13 @@
+// require('dotenv').config({ silent: true });
+
+// var dd = process.env.DAY;
+// var MM = process.env.MONTH;
+// var yyyy = process.env.YEAR;
+// var HH = process.env.HOUR;
+// var mm = process.env.MINUTE;
+// var ss = process.env.SECOND;
+// var fff = process.env.MILLISECOND
+
 var JSON;
 if (!JSON) {
     JSON = {};
@@ -387,9 +397,9 @@ if (!JSON) {
       secondToday = byId('ss').value;
       dateNow = byId('ymdhis').value;
 
-		var yyyy = 2017,
+		var yyyy = 2018,
 			MM = 11,
-			dd = 24,
+			dd = 30,
 			HH = null,
 			mm = null,
 			ss = null,

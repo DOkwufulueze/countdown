@@ -49,7 +49,7 @@
 			<div id="main-container">
 				<div id="purpose">Countdown to</div>
 				<div id="title">Our Wedding Anniversary Celebration</div>
-				<div id="date">24 December 2017</div>
+				<div id="date">30 December 2018</div>
 			</div>
 			<div id="sub-container">
 				<div class="time-holder" id="days-holder">
