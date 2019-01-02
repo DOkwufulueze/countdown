@@ -432,7 +432,7 @@ if (!JSON) {
       ts.minutes = 0;
       ts.seconds = 0;
       stopStatus = true;
-      anniversaryDay("We had an awesome Wedding Anniversary on " + dd + " December 2017!");
+      anniversaryDay("We had an awesome Wedding Anniversary on " + dd + " December " + yyyy + "!");
     } else {
   		requestAnimationFrame(update, timespan.parentNode);
     }
